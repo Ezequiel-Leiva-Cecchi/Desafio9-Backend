@@ -1,4 +1,3 @@
-// src/utils/logger.js
 import winston from 'winston';
 
 const customLevelOptions = {
@@ -22,7 +21,7 @@ const developmentLogger = winston.createLogger({
     levels: customLevelOptions.levels,
     transports: [
         new winston.transports.Console({
-            level: 'debug', // Loguear a partir del nivel debug en desarrollo
+            level: 'debug', 
             format: winston.format.combine(
                 winston.format.colorize({ colors: customLevelOptions.colors }),
                 winston.format.simple()
@@ -35,7 +34,7 @@ const productionLogger = winston.createLogger({
     levels: customLevelOptions.levels,
     transports: [
         new winston.transports.Console({
-            level: 'info', // Loguear a partir del nivel info en producción
+            level: 'info', 
             format: winston.format.combine(
                 winston.format.colorize({ colors: customLevelOptions.colors }),
                 winston.format.simple()
@@ -43,7 +42,7 @@ const productionLogger = winston.createLogger({
         }),
         new winston.transports.File({
             filename: 'errors.log',
-            level: 'error' // Enviar logs de nivel error a un archivo en producción
+            level: 'error' 
         })
     ]
 });

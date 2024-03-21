@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/user.routes.js';
 import productsRoutes from "./routes/product.routes.js";
 import { customErrors } from "./middleware/errorMiddleware.js";
-import logger from './utils/logger.js'; // Importar el logger
+import logger from './utils/logger.js'; 
 
 dotenv.config();
 
