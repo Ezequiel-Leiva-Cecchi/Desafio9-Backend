@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.use(customErrors);
+
 
 app.get('/loggerTest', (req, res) => {
     logger.info('Text info');
@@ -28,6 +28,8 @@ app.get('/loggerTest', (req, res) => {
 
 app.use('/api/user', userRoutes);
 app.use('/api/products', productsRoutes); 
+
+app.use(customErrors);
 
 app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`);
