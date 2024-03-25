@@ -1,8 +1,7 @@
-// src/routes/product.routes.js
 import { Router } from "express";
 import { generateProduct } from '../utils/mock.js'; 
 import { errorDictionary } from '../middleware/errorMiddleware.js'; 
-import logger from '../utils/logger.js'; // Importar el logger
+import logger from '../utils/logger.js'; 
 
 const productsRoutes = Router();
 
